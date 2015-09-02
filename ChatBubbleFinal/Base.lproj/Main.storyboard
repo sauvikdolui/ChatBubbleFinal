@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChatBubbleFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyv-fE-xhc">
+                                <rect key="frame" x="0.0" y="20" width="600" height="506"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evu-eO-mDa">
+                                <rect key="frame" x="0.0" y="534" width="600" height="66"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq7-NO-Gjx">
+                                        <rect key="frame" x="497" y="18" width="30" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="i5F-ec-Ql7"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="camera">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cameraButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ra-NN-s7V"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wce-46-7Ia">
+                                        <rect key="frame" x="8" y="17" width="473" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="kfj-fn-q7t"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kq-xc-VBJ">
+                                        <rect key="frame" x="537" y="17" width="45" height="30"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9QM-Gt-cgG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="wce-46-7Ia" secondAttribute="centerY" constant="1" id="2jU-ot-JuV"/>
+                                    <constraint firstItem="dq7-NO-Gjx" firstAttribute="centerY" secondItem="wce-46-7Ia" secondAttribute="centerY" id="6mu-v6-y1o"/>
+                                    <constraint firstAttribute="height" constant="66" id="AXC-Yp-a2J"/>
+                                    <constraint firstAttribute="trailing" secondItem="8kq-xc-VBJ" secondAttribute="trailing" constant="18" id="XPr-VH-pBb"/>
+                                    <constraint firstItem="8kq-xc-VBJ" firstAttribute="leading" secondItem="dq7-NO-Gjx" secondAttribute="trailing" constant="10" id="YiU-g0-1bA"/>
+                                    <constraint firstItem="wce-46-7Ia" firstAttribute="leading" secondItem="evu-eO-mDa" secondAttribute="leading" constant="8" id="aI9-lZ-lrH"/>
+                                    <constraint firstItem="dq7-NO-Gjx" firstAttribute="leading" secondItem="wce-46-7Ia" secondAttribute="trailing" constant="16" id="aiv-g8-fON"/>
+                                    <constraint firstItem="dq7-NO-Gjx" firstAttribute="top" secondItem="evu-eO-mDa" secondAttribute="top" constant="18" id="bPg-uQ-ybb"/>
+                                    <constraint firstAttribute="trailing" secondItem="dq7-NO-Gjx" secondAttribute="trailing" constant="73" id="w0R-19-jrT"/>
+                                    <constraint firstItem="dq7-NO-Gjx" firstAttribute="centerY" secondItem="8kq-xc-VBJ" secondAttribute="centerY" id="xOB-vi-6Il"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="evu-eO-mDa" secondAttribute="trailing" constant="-16" id="Bsz-ec-CEb"/>
+                            <constraint firstItem="iyv-fE-xhc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CAr-d5-SRf"/>
+                            <constraint firstItem="evu-eO-mDa" firstAttribute="top" secondItem="iyv-fE-xhc" secondAttribute="bottom" constant="8" id="EJr-PU-E1i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iyv-fE-xhc" secondAttribute="trailing" constant="-16" id="Hxg-ep-Whi"/>
+                            <constraint firstItem="iyv-fE-xhc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="S2A-vu-79s"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="evu-eO-mDa" secondAttribute="bottom" id="e8v-jZ-3Yf"/>
+                            <constraint firstItem="evu-eO-mDa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="ta2-Rx-Fth"/>
+                            <constraint firstAttribute="centerX" secondItem="evu-eO-mDa" secondAttribute="centerX" id="vDr-dE-pQn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttomLayoutConstraint" destination="e8v-jZ-3Yf" id="vSr-iu-JpE"/>
+                        <outlet property="messageCointainerScroll" destination="iyv-fE-xhc" id="oKg-Su-vCd"/>
+                        <outlet property="messageComposingView" destination="evu-eO-mDa" id="GMz-N3-ffR"/>
+                        <outlet property="sendButton" destination="8kq-xc-VBJ" id="jlU-U1-Vib"/>
+                        <outlet property="textField" destination="wce-46-7Ia" id="YtQ-fL-BZj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="239"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="128" height="128"/>
+    </resources>
+</document>
