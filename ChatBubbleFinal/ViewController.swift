@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         sendButton.enabled = false
         
         
-        let chatBubbleData1 = ChatBubbleData(text: "Hey !!!!have a look on that....", image:UIImage(named: "chatImage\(Int(arc4random() % 4)).jpg"), date: NSDate(), type: .Mine)
+        let chatBubbleData1 = ChatBubbleData(text: "Hey !!!!have a look on that....", image:UIImage(named: "chatImage1.jpg"), date: NSDate(), type: .Mine)
         addChatBubble(chatBubbleData1)
         
         let chatBubbleData2 = ChatBubbleData(text: "Nice.... what about this one", image:UIImage(named: "chatImage3.jpg"), date: NSDate(), type: .Opponent)
